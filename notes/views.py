@@ -7,7 +7,7 @@ from .forms import NoteForm
 
 class NoteListView(ListView):
     model = Note
-    template_name = 'notes/note_list.html'
+    template_name = "notes/note_list.html"
     context_object_name = 'notes'
 
 
