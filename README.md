@@ -4,6 +4,10 @@ A simple Notes application built with Django following modular and scalable arch
 
 Features
 
+- ### **Translated versions**
+    - [Persian Version - فارسی](READMEir.md)
+
+
 - Create notes
 - List notes
 - Update notes (planned)
