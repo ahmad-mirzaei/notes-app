@@ -17,3 +17,5 @@ class NoteCreateView(CreateView):
     success_url = reverse_lazy("note-list")
 
 
+
+
