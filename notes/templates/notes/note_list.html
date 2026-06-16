@@ -1,4 +1,8 @@
-<h1>Notes List</h1>
+<h1>Notes</h1>
+
+<a href="{% url 'note-create' %}">
+    create new note
+</a>
 
 <ul>
     {% for note in notes %}
@@ -7,3 +11,4 @@
         <li> No Notes Yet </li>
     {% endfor %}
 </ul>
+
