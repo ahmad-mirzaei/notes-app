@@ -7,7 +7,11 @@
 <ul>
     {% for note in notes %}
         <li>
-            <a href="{% url 'note-update' note.pk %}">{{ note.title }}</a>
+            {{ note.title }} <br>
+            <a href="{% url 'note-update' note.pk %}">ویرایش </a>
+            |
+            <a href="{% url 'note-delete' note.pk %}">حذف</a>
+            <hr>
         </li>
         {% empty %}
         <li> No Notes Yet </li>
