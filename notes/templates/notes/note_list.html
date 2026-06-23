@@ -6,9 +6,10 @@
 
 <ul>
     {% for note in notes %}
-        <li>{{ note.title }}</li>
+        <li>
+            <a href="{% url 'note-update' note.pk %}">{{ note.title }}</a>
+        </li>
         {% empty %}
         <li> No Notes Yet </li>
     {% endfor %}
 </ul>
-
