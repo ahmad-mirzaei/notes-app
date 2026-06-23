@@ -9,10 +9,10 @@
         <li>
             {{ note.title }} <br>
             <a href="{% url 'note-update' note.pk %}">ویرایش </a>
-            |
+            &nbsp;|&nbsp;
             <a href="{% url 'note-delete' note.pk %}">حذف</a>
-            <hr>
         </li>
+        <br>
         {% empty %}
         <li> No Notes Yet </li>
     {% endfor %}
