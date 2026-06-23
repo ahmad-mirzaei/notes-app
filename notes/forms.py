@@ -8,6 +8,22 @@ class NoteForm(forms.ModelForm):
         model = Note
         fields = ["title", "content"]
     
+        widgets = {
+            "title" : forms.TextInput(
+                attrs = {
+                    "placeholder" : "title",
+                    "class" : "form-control",
+                }
+            ),
+        "content" : forms.Textarea(
+            attrs = {
+                "placeholder" : "write your note here...",
+                "rows" : 6,
+                "class" : "form-control",
+            }
+        ),
+        }
+    
     def clean_title(self):
         title = self.cleaned_data["title"].strip()
         if len(title) < 3:
