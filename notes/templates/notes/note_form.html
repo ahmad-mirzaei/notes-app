@@ -1,4 +1,4 @@
-<h1>Create Note</h1>
+{% comment %} <h1>Create Note</h1>
 
 <form method = "post">
     {% csrf_token %}
@@ -6,5 +6,32 @@
 
     <button type="submit">save</button>
 </form>
+{% endcomment %}
 
 
+
+<h1>بنویس</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div>
+        <label for="{{ form.title.id_for_label }}">عنوان یادداشت</label>
+        {{ form.title }}
+
+        {% if form.title.errors %}
+            {{ form.title.errors }}
+        {% endif %}
+    </div>
+
+    <div>
+        <label for="{{ form.content.id_for_label }}">متن یادداشت</label>
+        {{ form.content }}
+
+        {% if form.content.errors %}
+            {{ form.content.errors }}
+        {% endif %}
+    </div>
+
+    <button type="submit">ذخیره</button>
+</form>
