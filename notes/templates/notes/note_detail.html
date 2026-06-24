@@ -1,13 +1,14 @@
+TEST JALALI
+{% load jalali %}
 <h1>{{ note.title }}</h1>
-
 <p>{{ note.content }}</p>
 
 <p>
-    Created: {{ note.created_at }}
+    Created: {{ note.created_at|jalali }}
 </p>
 
 <p>
-    Updated: {{ note.updated_at }}
+    Updated: {{ note.updated_at|jalali }}
 </p>
 
 <hr>
