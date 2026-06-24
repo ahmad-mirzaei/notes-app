@@ -1,0 +1,25 @@
+<h1>{{ note.title }}</h1>
+
+<p>{{ note.content }}</p>
+
+<p>
+    Created: {{ note.created_at }}
+</p>
+
+<p>
+    Updated: {{ note.updated_at }}
+</p>
+
+<hr>
+
+<a href="{% url 'note-update' note.pk %}">
+    Edit
+</a>
+
+<a href="{% url 'note-delete' note.pk %}">
+    Delete
+</a>
+
+<a href="{% url 'note-list' %}">
+    Back to List
+</a>
