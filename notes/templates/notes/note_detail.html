@@ -1,5 +1,7 @@
 {% load jalali %}
+
 <h1>{{ note.title }}</h1>
+
 <p>{{ note.content }}</p>
 
 <p>
@@ -15,11 +17,12 @@
 <a href="{% url 'note-update' note.pk %}">
     Edit
 </a>
-
+&nbsp;|&nbsp;
 <a href="{% url 'note-delete' note.pk %}">
     Delete
 </a>
-
+<br>
+<br>
 <a href="{% url 'note-list' %}">
     Back to List
 </a>
