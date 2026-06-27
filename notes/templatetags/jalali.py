@@ -1,5 +1,6 @@
 import jdatetime
 from django import template
+from django.utils import timezone
 
 register = template.Library()
 
@@ -8,6 +9,10 @@ def jalali(value):
     if not value:
         return ""
 
-    return jdatetime.datetime.fromgregorian(
-        datetime=value
-    ).strftime("%Y/%m/%d %H:%M")
+    # تبدیل به ساعت تهران
+    value = timezone.localtime(value)
+
+    # تبدیل به تاریخ شمسی
+    jdate = jdatetime.datetime.fromgregorian(datetime=value)
+
+    return jdate.strftime("%Y/%m/%d %H:%M")

@@ -1,3 +1,23 @@
+<form method="GET">
+    <input
+        type="text"
+        name="q"
+        placeholder="جستجوی یادداشت..."
+        value="{{ request.GET.q }}"
+    >
+
+    <button type="submit"> جستجو </button>
+
+    <br>
+    {% if request.GET.q %} 
+        <p> نتایج جستجو برای: <strong>{{ request.GET.q }}</strong> </p> 
+    {% endif %}
+
+    <a href="{% url 'note-list' %}"> پاک کردن جستجو</a>
+</form>
+
+<hr>
+
 <h1>یادداشت های من</h1>
 
 <a href="{% url 'note-create' %}">
@@ -16,4 +36,5 @@
         {% empty %}
         <li>هیچ یادداشتی وجود ندارد؛ لطفاً یک یادداشت جدید ایجاد کنید</li>
     {% endfor %}
+ 
 </ul>
