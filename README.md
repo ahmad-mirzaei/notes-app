@@ -3,7 +3,7 @@ Django Notes App
 A clean and maintainable Notes application built with Django using Class-Based Views (CBVs) and modern Django development practices.
 
 - ### **Translated versions**
-    - [Persian Version - فارسی](READMEir.md)
+    - [Persian Version - فارسی](README_fa.md)
 
 ---
 
